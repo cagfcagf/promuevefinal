@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
     <link rel="stylesheet" href="../Css/normalize.css">
     <link rel="stylesheet" href="../Css/sass.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -33,8 +32,6 @@
     <meta property=”og:image” content="" />
     <meta property=”og:url” content=”PENDIENTE AL SUBIR AL SERVIDOR” />
     <meta property=”og:site_name” content="Proyecto Promueve" />
-
-
   </head>
   <body>
     <!-- Inicio Menu -->
@@ -66,114 +63,111 @@
     </header>
     <!-- Fin Menu -->
     <!-- Inicio Sección principal -->
-
     <main id="loQuiero">
       <section>
         <div class="main__gridStructure">
           <h2>¡Lo quiero en mi empresa!</h2>
           <p>Nuestro principal objetivo es que la mayor cantidad de empresas adopten al <b>Proyecto Promueve</b> como la base de las relaciones entre la empresa y sus clientes. Queremos que el <b>respecto</b>, el valor básico de cualquier interacción, sea un imperante en cualquier relación. Queremos clientes felices, pero también que los miembros de cualquier equipo de servicio al cliente lo sean.</p>
           <div class="formContainer">
-
-          <iframe
-            id="JotFormIFrame-211906524075049"
-            title="Formulario"
-            onload="window.parent.scrollTo(0,0)"
-            allowtransparency="true"
-            allowfullscreen="true"
-            allow="geolocation; microphone; camera"
-            src="https://form.jotform.com/211906524075049"
-            frameborder="0"
-            style="
-            min-width: 100%;
-            height:539px;
-            border:none;"
-            scrolling="no"
-          >
-          </iframe>
-          <script type="text/javascript">
-            var ifr = document.getElementById("JotFormIFrame-211906524075049");
-            if (ifr) {
-              var src = ifr.src;
-              var iframeParams = [];
-              if (window.location.href && window.location.href.indexOf("?") > -1) {
-                iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+            <iframe
+              id="JotFormIFrame-211906524075049"
+              title="Formulario"
+              onload="window.parent.scrollTo(0,0)"
+              allowtransparency="true"
+              allowfullscreen="true"
+              allow="geolocation; microphone; camera"
+              src="https://form.jotform.com/211906524075049"
+              frameborder="0"
+              style="
+              min-width: 100%;
+              height:539px;
+              border:none;"
+              scrolling="no"
+            >
+            </iframe>
+            <script type="text/javascript">
+              var ifr = document.getElementById("JotFormIFrame-211906524075049");
+              if (ifr) {
+                var src = ifr.src;
+                var iframeParams = [];
+                if (window.location.href && window.location.href.indexOf("?") > -1) {
+                  iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+                }
+                if (src && src.indexOf("?") > -1) {
+                  iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+                  src = src.substr(0, src.indexOf("?"))
+                }
+                iframeParams.push("isIframeEmbed=1");
+                ifr.src = src + "?" + iframeParams.join('&');
               }
-              if (src && src.indexOf("?") > -1) {
-                iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
-                src = src.substr(0, src.indexOf("?"))
-              }
-              iframeParams.push("isIframeEmbed=1");
-              ifr.src = src + "?" + iframeParams.join('&');
-            }
-            window.handleIFrameMessage = function(e) {
-              if (typeof e.data === 'object') { return; }
-              var args = e.data.split(":");
-              if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
-              if (!iframe) { return; }
-              switch (args[0]) {
-                case "scrollIntoView":
-                  iframe.scrollIntoView();
-                  break;
-                case "setHeight":
-                  iframe.style.height = args[1] + "px";
-                  break;
-                case "collapseErrorPage":
-                  if (iframe.clientHeight > window.innerHeight) {
-                    iframe.style.height = window.innerHeight + "px";
-                  }
-                  break;
-                case "reloadPage":
-                  window.location.reload();
-                  break;
-                case "loadScript":
-                  if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
-                  var src = args[1];
-                  if (args.length > 3) {
-                      src = args[1] + ':' + args[2];
-                  }
-                  var script = document.createElement('script');
-                  script.src = src;
-                  script.type = 'text/javascript';
-                  document.body.appendChild(script);
-                  break;
-                case "exitFullscreen":
-                  if      (window.document.exitFullscreen)        window.document.exitFullscreen();
-                  else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
-                  else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
-                  else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
-                  else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
-                  break;
-              }
-              var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
-              if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
-                var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
-                iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
-              }
-            };
-            window.isPermitted = function(originUrl, whitelisted_domains) {
-              var url = document.createElement('a');
-              url.href = originUrl;
-              var hostname = url.hostname;
-              var result = false;
-              if( typeof hostname !== 'undefined' ) {
-                whitelisted_domains.forEach(function(element) {
-                    if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
-                        result = true;
+              window.handleIFrameMessage = function(e) {
+                if (typeof e.data === 'object') { return; }
+                var args = e.data.split(":");
+                if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+                if (!iframe) { return; }
+                switch (args[0]) {
+                  case "scrollIntoView":
+                    iframe.scrollIntoView();
+                    break;
+                  case "setHeight":
+                    iframe.style.height = args[1] + "px";
+                    break;
+                  case "collapseErrorPage":
+                    if (iframe.clientHeight > window.innerHeight) {
+                      iframe.style.height = window.innerHeight + "px";
                     }
-                });
-                return result;
+                    break;
+                  case "reloadPage":
+                    window.location.reload();
+                    break;
+                  case "loadScript":
+                    if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+                    var src = args[1];
+                    if (args.length > 3) {
+                        src = args[1] + ':' + args[2];
+                    }
+                    var script = document.createElement('script');
+                    script.src = src;
+                    script.type = 'text/javascript';
+                    document.body.appendChild(script);
+                    break;
+                  case "exitFullscreen":
+                    if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+                    else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+                    else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+                    else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+                    else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+                    break;
+                }
+                var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+                if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+                  var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+                  iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+                }
+              };
+              window.isPermitted = function(originUrl, whitelisted_domains) {
+                var url = document.createElement('a');
+                url.href = originUrl;
+                var hostname = url.hostname;
+                var result = false;
+                if( typeof hostname !== 'undefined' ) {
+                  whitelisted_domains.forEach(function(element) {
+                      if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                          result = true;
+                      }
+                  });
+                  return result;
+                }
               }
-            }
-            if (window.addEventListener) {
-              window.addEventListener("message", handleIFrameMessage, false);
-            } else if (window.attachEvent) {
-              window.attachEvent("onmessage", handleIFrameMessage);
-            }
-            </script>
-
-                </div>
-              </div>
-            </section>
+              if (window.addEventListener) {
+                window.addEventListener("message", handleIFrameMessage, false);
+              } else if (window.attachEvent) {
+                window.attachEvent("onmessage", handleIFrameMessage);
+              }
+              </script>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Fin Sección principal -->
     <!-- Inicio del footer -->

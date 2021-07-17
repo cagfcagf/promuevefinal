@@ -488,6 +488,9 @@ Footer {
     align-items: center;
     flex-direction: column;
   }
+  .formContainer {
+    padding-top: 40px;
+  }
 }
 
 
@@ -582,6 +585,12 @@ Footer {
         display: flex;
        flex-direction: column;
        align-items: center;
+      }
+    }
+
+    #navbarTogglerDemo03 {
+      li {
+        margin-bottom: 10px;
       }
     }
 
